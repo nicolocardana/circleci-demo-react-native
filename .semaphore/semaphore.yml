@@ -17,16 +17,6 @@ blocks:
             - cache restore
             - npm install
             - cache store
-  - name: Run linter
-    task:
-      prologue:
-        commands:
-          - checkout
-      jobs:
-        - name: run eslint
-          commands:
-            - cache restore
-            - npm run lint
   - name: Run tests
     task:
       prologue:
